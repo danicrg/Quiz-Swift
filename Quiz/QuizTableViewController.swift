@@ -12,6 +12,7 @@ class QuizTableViewController: UITableViewController {
     
     var token: String = "bc0e796d7d9eaf927fff"
     var quizzes: [[String: Any]] = []
+    var session: URLSession!
     fileprivate var images = [String:UIImage]()
     @IBOutlet weak var refreshButton: UIBarButtonItem!
     
@@ -40,11 +41,12 @@ class QuizTableViewController: UITableViewController {
                     if quizzes?.count != 0 {
                         DispatchQueue.main.async {
                             self.quizzes += quizzes!
-                            self.tableView.reloadData()
+                            
                         }
                     } else {
                         DispatchQueue.main.async {
                             quizPages = false
+                            self.tableView.reloadData()
                         }
                     }
                 }
@@ -81,15 +83,16 @@ class QuizTableViewController: UITableViewController {
             if let image = images[imageUrl] {
                 cell?.quizImage.image = image
             } else {
+                UIApplication.shared.isNetworkActivityIndicatorVisible = true
                 if let url = URL(string: imageUrl) {
                     let queue = DispatchQueue(label: "Image Download Queue")
                     queue.async {
                         if let data = try? Data(contentsOf: url),
                             let image = UIImage(data: data) {
                             DispatchQueue.main.async {
-                                cell?.quizImage.image = image
                                 self.images[imageUrl] = image
                                 self.tableView.reloadRows(at: [indexPath], with: .fade)
+                                UIApplication.shared.isNetworkActivityIndicatorVisible = false
                             }
                         }
                     }

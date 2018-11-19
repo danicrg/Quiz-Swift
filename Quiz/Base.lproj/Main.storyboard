@@ -26,13 +26,13 @@
                                     <rect key="frame" x="0.0" y="0.0" width="341" height="98.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rc5-Wx-fw2">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rc5-Wx-fw2">
                                             <rect key="frame" x="110" y="21.5" width="48" height="24"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BVR-yn-99E">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BVR-yn-99E">
                                             <rect key="frame" x="110" y="55.5" width="37.5" height="18"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                             <nil key="textColor"/>
@@ -50,8 +50,10 @@
                                         <constraint firstItem="BVR-yn-99E" firstAttribute="leading" secondItem="dIl-XQ-jxZ" secondAttribute="trailing" constant="10" id="8X4-kz-Jre"/>
                                         <constraint firstItem="Rc5-Wx-fw2" firstAttribute="top" secondItem="867-Ap-rbf" secondAttribute="topMargin" constant="10" id="AQh-6Y-VGz"/>
                                         <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="BVR-yn-99E" secondAttribute="bottom" constant="10" id="JzL-aq-GDQ"/>
+                                        <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="BVR-yn-99E" secondAttribute="trailing" constant="10" id="dLs-Nt-ChD"/>
                                         <constraint firstItem="BVR-yn-99E" firstAttribute="top" secondItem="Rc5-Wx-fw2" secondAttribute="bottom" constant="10" id="k6i-uW-dcM"/>
                                         <constraint firstAttribute="bottom" secondItem="dIl-XQ-jxZ" secondAttribute="bottom" id="lmf-C6-Gm6"/>
+                                        <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="Rc5-Wx-fw2" secondAttribute="trailing" constant="10" id="nWv-Ct-HNU"/>
                                         <constraint firstItem="Rc5-Wx-fw2" firstAttribute="leading" secondItem="dIl-XQ-jxZ" secondAttribute="trailing" constant="10" id="q6g-s8-p68"/>
                                         <constraint firstItem="dIl-XQ-jxZ" firstAttribute="leading" secondItem="867-Ap-rbf" secondAttribute="leading" id="tOL-1a-pzl"/>
                                         <constraint firstItem="dIl-XQ-jxZ" firstAttribute="top" secondItem="867-Ap-rbf" secondAttribute="top" id="vu8-eF-1ZL"/>
@@ -93,13 +95,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bcv-X4-0Do">
-                                <rect key="frame" x="20" y="84" width="335" height="47"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="253" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="753" misplaced="YES" text="pregunta" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bcv-X4-0Do">
+                                <rect key="frame" x="20" y="84" width="335" height="59"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="39"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="249" image="questionMark" translatesAutoresizingMaskIntoConstraints="NO" id="ipb-SY-jyg">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="249" image="questionMark" translatesAutoresizingMaskIntoConstraints="NO" id="ipb-SY-jyg">
                                 <rect key="frame" x="20" y="201" width="335" height="396"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="respuesta" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8LE-Vh-aw9">
@@ -131,7 +133,6 @@
                             <constraint firstItem="ipb-SY-jyg" firstAttribute="leading" secondItem="qPQ-BL-D2F" secondAttribute="leading" constant="20" id="ncO-Hi-cQt"/>
                             <constraint firstItem="qPQ-BL-D2F" firstAttribute="trailing" secondItem="ipb-SY-jyg" secondAttribute="trailing" constant="20" id="okB-Tf-xNF"/>
                             <constraint firstItem="8LE-Vh-aw9" firstAttribute="leading" secondItem="qPQ-BL-D2F" secondAttribute="leading" constant="20" id="rzd-Bt-dAy"/>
-                            <constraint firstItem="ipb-SY-jyg" firstAttribute="top" secondItem="8LE-Vh-aw9" secondAttribute="bottom" constant="20" id="uXb-1F-7Zn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qPQ-BL-D2F"/>
                     </view>
@@ -141,11 +142,10 @@
                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Pistas"/>
+                                <connections>
+                                    <segue destination="LQx-Al-6WG" kind="show" identifier="Show Tips" id="nvd-Xm-SQB"/>
+                                </connections>
                             </button>
-                            <connections>
-                                <action selector="goToTips:" destination="bjw-hX-cud" id="B8K-HZ-7fq"/>
-                                <segue destination="LQx-Al-6WG" kind="show" identifier="Show Tips" id="7C1-2R-jY7"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -153,12 +153,11 @@
                         <outlet property="checkButton" destination="8py-mo-114" id="SGf-aL-Cmi"/>
                         <outlet property="question" destination="Bcv-X4-0Do" id="gIt-BI-79M"/>
                         <outlet property="quizImageView" destination="ipb-SY-jyg" id="kzy-av-vPe"/>
-                        <outlet property="tipsButton" destination="rNX-MZ-vdp" id="meb-C6-NwM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q33-VC-0zg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="181" y="93"/>
+            <point key="canvasLocation" x="180" y="92.203898050974516"/>
         </scene>
         <!--Tip Table View Controller-->
         <scene sceneID="eFx-cC-k6b">
@@ -176,7 +175,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NcD-Mt-8wH">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" text="Title" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NcD-Mt-8wH">
                                             <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>

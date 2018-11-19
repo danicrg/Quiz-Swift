@@ -22,6 +22,8 @@ class QuizViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         question.text = quizData["question"] as? String
+        question.lineBreakMode = NSLineBreakMode.byWordWrapping
+        question.sizeToFit()
         quizImageView.image = quizImage
         let tips = quizData["tips"] as? [String]
         if tips?.count == 0{
@@ -48,21 +50,12 @@ class QuizViewController: UIViewController {
         
     }
     
-    @IBAction func goToTips(_ sender: UIBarButtonItem) {
-        
-        self.performSegue(withIdentifier: "Show Tips", sender: self)
-        
-    }
-    
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "Show Tips" {
-            print("entramos en prepare")
+            print("\nentramos en prepare\n")
             if let tvc = segue.destination as? TipTableViewController {
                 
                 tvc.tipData = quizData["tips"] as? [String]
             }
-        }
     }
     
     func alert(_ message: String){
